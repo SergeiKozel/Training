@@ -228,10 +228,6 @@ if (word.length <= 11 &&  word.length >= 2 && word.length != 5) {
 }
 
 
-
-
-
-
 //Начинается ли слово с буквы N и заканчивается на 'd'? Если да, выведи 'Yes', если нет - "No".
 // подсказка, чтобы узнать последнюю букву console.log(str[str.length - 1]);
 let str = 'Neverland';
@@ -243,7 +239,6 @@ if (str[0] == 'N' && str[str.length - 1] == 'd' ) {
     } else {
     console.log('No');
     }
-
 
 
 //Является ли человек, школьником? Ему больше 7 и меньше 19, выведи = 'student'; меньше 6 = 'kid'; больше 18  = 'adult';
@@ -259,11 +254,6 @@ if (human1 >= 7 && human1 < 19) {
 } else if (human1 > 18){
     console.log('adult');
 }
-
-
-
-
-
 
 //Если длина номера телефона равна 10 или 11 цифрам, выведи 'real', если нет - 'fake';
 let phoneNumber = '+1918909090';
@@ -297,12 +287,11 @@ let numberTwo = 3;
 let numberTree = 2;
 
 
-
-
 //хотя бы одно из 3х чисел - четное. Если да, вывод 'Yes', other 'No'
 let numberOne1 = 21;
 let numberTwo2 = 3;
 let numberTree3 = 23;
+
 
 
 //Напишите функцию, которая возвращает меньшее число. Если числа равны, вернуть их сумму.
@@ -341,7 +330,6 @@ function numberValue(num){
 // console.log(numberValue(0)); //0
 
 //Напишите функцию, которая возвращает true, если число негативное и четное, false - ecли число негативное и не четное, разделите число на 2, если число позитивное и четное, умножте на 3, если число позитивное и не четное. Выведите 'zero', если число равно 0.
-
 function simpleMath(num){
 
 }
@@ -363,7 +351,6 @@ function sumOfTwo(one, two, tree){
 
 
 //Измените знак числа
-
 function changeSign(num){
 
 }
@@ -378,7 +365,6 @@ function changeSign(num){
 // "Spring", если месяц = 3, 4 или 5;
 // "Summer", если месяц = 6, 7 или 8;
 // "Fall", если месяц = 9, 10 или 11.
-
 function season(month){
           switch (month) {
               case 1:
@@ -410,6 +396,18 @@ console.log(season(8));
 //From_codewars-------------------------------------------
 
 //https://www.codewars.com/kata/572059afc2f4612825000d8a/solutions/javascript
+
+        function howManydays(month){
+            switch (month){
+                case 2: return 28
+                case 4:
+                case 6:
+                case 9:
+                case 11: return 30
+            }
+            return 31
+        }
+
 
 //https://www.codewars.com/kata/515e188a311df01cba000003/train/javascript
 function getPlanetName(id){
@@ -450,12 +448,28 @@ function calculate(a, x, b) {
         case '*':
             return a*b;
         case '/':
-            return b===0?null:a/b;
+            return b === 0  ? null : a/b;
         default:
             return null;
     }
 }
 //https://www.codewars.com/kata/57356c55867b9b7a60000bd7/train/javascript
+
+
+        function basicOp(operation, value1, value2) {
+            switch(operation) {
+                case '+':
+                    return value1 + value2;
+                case '-':
+                    return value1 - value2;
+                case '*':
+                    return value1 * value2;
+                case '/':
+                    return value1 === 0  ? null : value1/value2;
+                default:
+                    return null;
+            }
+        }
 
 //https://www.codewars.com/kata/5808dcb8f0ed42ae34000031/train/javascript
 function switchItUp(number){
@@ -486,6 +500,25 @@ function switchItUp(number){
 }
 //https://www.codewars.com/kata/5810085c533d69f4980001cf/train/javascript
 
+        function calculator (a,b,sign) {
+            if ((typeof a === 'number') && (typeof b === 'number')) {
+
+                switch (sign) {
+                    case '+':
+                        return a + b;
+                    case '-':
+                        return a - b;
+                    case '*':
+                        return a * b;
+                    case '/':
+                        return a / b;
+
+                }
+            }
+            return 'unknown value';
+        }
+
+
 //https://www.codewars.com/kata/53da3dbb4a5168369a0000fe/train/javascript
 function even_or_odd(number) {
     if (number % 2 === 0) {
@@ -496,22 +529,51 @@ function even_or_odd(number) {
     }
 
 //https://www.codewars.com/kata/55cbd4ba903825f7970000f5/train/javascript
+
 //https://www.codewars.com/kata/56368f37d464c0a43c00007f/solutions/javascript //switch
+
+
 //https://www.codewars.com/kata/56530b444e831334c0000020/train/javascript
+
 //https://www.codewars.com/kata/57089707fe2d01529f00024a/train/javascript
+
 //https://www.codewars.com/kata/57158fb92ad763bb180004e7/train/javascript //use ``
+        function rainAmount(mm){
+            if (rainAmount = 40) {
+                return "You need to give your plant " + (`40 - ${rainAmount}`) + " mm of water"
+            }
+            if else {
+                return "Your plant has had more than enough water for today!"
+            }
+        }
+
 //https://www.codewars.com/kata/571f832f07363d295d001ba8/train/javascript
+
 //https://www.codewars.com/kata/574b3b1599d8f897470018f6/train/javascript
+
 //https://www.codewars.com/kata/5761a717780f8950ce001473/solutions/javascript
+
 //https://www.codewars.com/kata/57a429e253ba3381850000fb/solutions
+
+
 //https://www.codewars.com/kata/57b58827d2a31c57720012e8/train/javascript //toFixed(2)
+
 //https://www.codewars.com/kata/57f022a6cba9da84a3000095
+
 //https://www.codewars.com/kata/583710ccaa6717322c000105/train/javascript
+
 //https://www.codewars.com/kata/5875b200d520904a04000003/solutions/javascript
+
 //https://www.codewars.com/kata/5ab6538b379d20ad880000ab/train/javascript
+
 //https://www.codewars.com/kata/52ceafd1f235ce81aa00073a/train/javascript
+
 //https://www.codewars.com/kata/55192f4ecd82ff826900089e/train/javascript
+
 // https://www.codewars.com/kata/55cb632c1a5d7b3ad0000145/train/javascript
+
 //https://www.codewars.com/kata/chuck-norris-vii-true-or-false-beginner
+
 //https://www.codewars.com/kata/571f832f07363d295d001ba8/train/javascript
+
 //https://www.codewars.com/kata/59ca8246d751df55cc00014c/train/javascript
