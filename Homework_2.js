@@ -322,17 +322,35 @@ evenOdd(0); //Even
 
 
 //Если число больше 0, вернуть - positive, меньше - negative, 0 - zero;
-function numberValue(num){
-
-}
+function numberValue(num)function numberValue(num){
+            if (num < 0) {
+                return 'negative';
+            } if (num > 0){
+                return 'positive';
+            }
+            else {
+                return 'zero';
+            }
+        }
 // console.log(numberValue(9)); //positive
 // console.log(numberValue(-9)); //negative
 // console.log(numberValue(0)); //0
 
-//Напишите функцию, которая возвращает true, если число негативное и четное, false - ecли число негативное и не четное, разделите число на 2, если число позитивное и четное, умножте на 3, если число позитивное и не четное. Выведите 'zero', если число равно 0.
+//Напишите функцию, которая возвращает true, если число негативное и четное, false - ecли число негативное и не четное, разделите число на 2,
+// если число позитивное и четное, умножте на 3, если число позитивное и не четное. Выведите 'zero', если число равно 0.
 function simpleMath(num){
-
-}
+            if (num < 0 && num % 2 == 0) {
+                return 'true';
+            } if (num < 0 && num % 2 != 0){
+                return 'false';
+            } if (num > 0 && num % 2 == 0) {
+                return num / 2;
+            } if (num > 0 && num % 2 != 0) {
+                return num * 2;
+            } else {
+                return 'zero';
+            }
+        }
 // console.log(simpleMath(9));
 // console.log(simpleMath(-9));
 // console.log(simpleMath(10));
@@ -343,6 +361,7 @@ function simpleMath(num){
 function sumOfTwo(one, two, tree){
 
 }
+
 // console.log(sumOfTwo(3, 0, -1));
 // console.log(sumOfTwo(-3, 0, -1));
 // console.log(sumOfTwo(13, 10, -1));
@@ -530,20 +549,42 @@ function even_or_odd(number) {
 
 //https://www.codewars.com/kata/55cbd4ba903825f7970000f5/train/javascript
 
-//https://www.codewars.com/kata/56368f37d464c0a43c00007f/solutions/javascript //switch
+        function getGrade (s1, s2, s3) {
+            avg = (s1+s2+s3)/3;
+            if (avg < 60)  return "F";
+            else if (avg < 70) return "D";
+            else if (avg < 80) return "C";
+            else if (avg < 90) return "B";
+            else return "A";
+        }
 
+//https://www.codewars.com/kata/56368f37d464c0a43c00007f/solutions/javascript //switch
+        const calculate = (a, op, b) => {
+            switch (op) {
+                case "+": return a + b
+                case "-": return a - b
+                case "*": return a * b
+                case "/": return b ? a / b : null
+            }
+            return null
+        }
 
 //https://www.codewars.com/kata/56530b444e831334c0000020/train/javascript
+
+        function chromosomeCheck(sperm) {
+            return sperm == 'XY' ? 'Congratulations! You\'re going to have a son.'
+           : 'Congratulations! You\'re going to have a daughter.'
+               }
 
 //https://www.codewars.com/kata/57089707fe2d01529f00024a/train/javascript
 
 //https://www.codewars.com/kata/57158fb92ad763bb180004e7/train/javascript //use ``
         function rainAmount(mm){
-            if (rainAmount = 40) {
-                return "You need to give your plant " + (`40 - ${rainAmount}`) + " mm of water"
+            if (mm < 40) {
+                return `You need to give your plant ${40 - mm}mm of water`;
             }
-            if else {
-                return "Your plant has had more than enough water for today!"
+            else {
+                return "Your plant has had more than enough water for today!";
             }
         }
 
@@ -552,11 +593,71 @@ function even_or_odd(number) {
 //https://www.codewars.com/kata/574b3b1599d8f897470018f6/train/javascript
 
 //https://www.codewars.com/kata/5761a717780f8950ce001473/solutions/javascript
+        function  calculateAge(a, b) {
+            if (b > a && b - a != 1) {
+                return `You are ${b - a} years old.`
+            } if (b < a && b - a != -1){
+                return `You will be born in ${a - b} years.`
+            } if (a === b){
+                return `You were born this very year!`
+            } if (b - a == -1){
+                return `You will be born in 1 year.`
+            }
+            else return `You are 1 year old.`
+        }
+
+
 
 //https://www.codewars.com/kata/57a429e253ba3381850000fb/solutions
 
+        function bmi(weight, height) {
+            let result = weight / height ** 2;
+            if (result <= 18.5) {
+                return 'Underweight';
+            }
+            if (result <= 25.0) {
+                return 'Normal';
+            }
+            if (result <= 30.0) {
+                return 'Overweight';
+            }
+            if (result > 30.0) {
+                return 'Obese';
+            }
+        }
 
+
+        function bmi(weight, height) {
+            let result = weight / height ** 2;
+            return bmi <= 18.5 ? 'Underweight'
+                : bmi <= 25.0 ? 'Normal'
+                    : bmi <= 30.0 ? 'Overweight'
+                        :  'Obese';
+
+        }
 //https://www.codewars.com/kata/57b58827d2a31c57720012e8/train/javascript //toFixed(2)
+
+        function fuelPrice(litres, pricePerLitre) {
+            if (litres >= 2 && litres < 4) {
+                return +(pricePerLitre * litres - litres * 0.05).toFixed(2);
+            } else if (litres >= 4 && litres < 6) {
+                return +(pricePerLitre * litres - litres * 0.1).toFixed(2);
+            } else if (litres >= 6 && litres < 8) {
+                return +(pricePerLitre * litres - litres * 0.15).toFixed(2);
+            } else if (litres >= 8 && litres < 10) {
+                return +(pricePerLitre * litres - litres * 0.20).toFixed(2);
+            } else {
+                return +(pricePerLitre * litres - litres * 0.25).toFixed(2);
+            }
+        }
+
+
+        function fuelPrice(litres, pricePerLiter) {
+            let discount = Math.min(Math.floor(litres/2) * 0.05, 0.25);
+            let price = litres * (pricePerLiter - discount);
+            return Math.round(price*100) / 100;
+        }
+
 
 //https://www.codewars.com/kata/57f022a6cba9da84a3000095
 
@@ -565,6 +666,18 @@ function even_or_odd(number) {
 //https://www.codewars.com/kata/5875b200d520904a04000003/solutions/javascript
 
 //https://www.codewars.com/kata/5ab6538b379d20ad880000ab/train/javascript
+        const areaOrPerimeter = function(l , w) {
+            if (l == w){
+                return l * w;
+            } else {
+                return (l + w) * 2;
+        }
+        }
+
+
+        const areaOrPerimeter = function(l , w) {
+            return l == w ? l * w : (l + w) * 2;
+        }
 
 //https://www.codewars.com/kata/52ceafd1f235ce81aa00073a/train/javascript
 
@@ -576,4 +689,18 @@ function even_or_odd(number) {
 
 //https://www.codewars.com/kata/571f832f07363d295d001ba8/train/javascript
 
+        function trueOrFalse(val){
+            if (val){
+                return 'true';
+        } else {
+                return 'false';
+        }
+        }
+
+        function trueOrFalse(val){
+            return !val ? 'false':'true'
+        }
 //https://www.codewars.com/kata/59ca8246d751df55cc00014c/train/javascript
+        function hero(bullets, dragons){
+            return bullets >= dragons * 2
+        }
